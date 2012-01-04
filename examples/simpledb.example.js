@@ -1,8 +1,10 @@
 var Amazon = require('../index');
 
-var auth = new Amazon.Util.Auth('123', '123')
+var auth = new Amazon.Util.Auth('ACCESS KEY', 'SECRET KEY')
   , simpledb = new Amazon.SimpleDB(auth);
 
-simpledb.listDomains().on('complete', function(data){
+simpledb.listDomains().whenever(function(error, data){
+    if (error) throw error;
+    
     console.log(data);
 });

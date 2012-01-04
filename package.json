@@ -11,8 +11,9 @@
     "node": "~0.6.5"
   },
   "dependencies": {
-      "express":    "2.5.x",
-      "underscore": "1.2.x"
+      "underscore": "1.2.x",
+      "futures": ">=2.1.0",
+      "xml2js": ">=0.1.13"
   },
   "devDependencies": {}
 }
