@@ -1,7 +1,7 @@
-var Amazon = require('../index');
+var Amazon = require('../index')
+  , auth   = require('./examples.auth');
 
-var auth = new Amazon.Util.Auth('ACCESS KEY', 'SECRET KEY')
-  , simpledb = new Amazon.SimpleDB(auth);
+var simpledb = new Amazon.SimpleDB(auth);
 
 simpledb.listDomains().whenever(function(error, data){
     if (error) throw error;
